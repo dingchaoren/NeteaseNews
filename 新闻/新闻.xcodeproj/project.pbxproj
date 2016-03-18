@@ -13,6 +13,7 @@
 		18719D581C9C25BA00A6C2D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18719D561C9C25BA00A6C2D3 /* LaunchScreen.storyboard */; };
 		18719D631C9C27C200A6C2D3 /* News.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18719D621C9C27C200A6C2D3 /* News.storyboard */; };
 		18719D661C9C27E600A6C2D3 /* NewsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18719D651C9C27E600A6C2D3 /* NewsTableViewController.m */; };
+		18870B561C9C2EFF005512CE /* NetworkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 18870B551C9C2EFF005512CE /* NetworkTools.m */; };
 		75697BED0A365659F9FA37B1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6315AEF426EE61F1DD4A592D /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,8 @@
 		18719D621C9C27C200A6C2D3 /* News.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = News.storyboard; sourceTree = "<group>"; };
 		18719D641C9C27E600A6C2D3 /* NewsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsTableViewController.h; sourceTree = "<group>"; };
 		18719D651C9C27E600A6C2D3 /* NewsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsTableViewController.m; sourceTree = "<group>"; };
+		18870B541C9C2EFF005512CE /* NetworkTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkTools.h; sourceTree = "<group>"; };
+		18870B551C9C2EFF005512CE /* NetworkTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkTools.m; sourceTree = "<group>"; };
 		27A96095197D7FB940B61F45 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		6315AEF426EE61F1DD4A592D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E41951DB5C9678E5685BBF28 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -106,6 +109,8 @@
 		18719D611C9C273D00A6C2D3 /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				18870B541C9C2EFF005512CE /* NetworkTools.h */,
+				18870B551C9C2EFF005512CE /* NetworkTools.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -248,6 +253,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18870B561C9C2EFF005512CE /* NetworkTools.m in Sources */,
 				18719D661C9C27E600A6C2D3 /* NewsTableViewController.m in Sources */,
 				18719D4D1C9C25BA00A6C2D3 /* AppDelegate.m in Sources */,
 				18719D4A1C9C25BA00A6C2D3 /* main.m in Sources */,
