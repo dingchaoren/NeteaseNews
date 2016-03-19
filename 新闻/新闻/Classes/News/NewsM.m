@@ -85,7 +85,11 @@ const char *kProertiesKey = "kProertiesKey";
 }
 
 
-+(void)loadNewsListWithURLString:(NSString *)urlString{
++(void)loadNewsListWithURLString:(NSString *)urlString finished:(void (^)(NSArray *))finished{
+    
+    // 断言
+    NSAssert(finished !=nil, @"必须传入完成回调");
+    
     [[NetworkTools sharedNetworkTools]GET:urlString parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task,NSDictionary *responseObject) {
         
         // url 不同  第一层字典的 key 不同
@@ -105,8 +109,8 @@ const char *kProertiesKey = "kProertiesKey";
         for (NSDictionary *dict in array) {
             [arrayM addObject:[self newsWithDict:dict]];
         }
-        NSLog(@"%@",arrayM);
-        
+        // 直接回调
+        finished(arrayM.copy);
         
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {

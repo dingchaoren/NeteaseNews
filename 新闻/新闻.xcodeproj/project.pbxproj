@@ -16,6 +16,7 @@
 		18870B561C9C2EFF005512CE /* NetworkTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 18870B551C9C2EFF005512CE /* NetworkTools.m */; };
 		18870B591C9C34A2005512CE /* NewsM.m in Sources */ = {isa = PBXBuildFile; fileRef = 18870B581C9C34A2005512CE /* NewsM.m */; };
 		18870B5C1C9C43E8005512CE /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 18870B5B1C9C43E8005512CE /* NSArray+Log.m */; };
+		18870B5F1C9D82CF005512CE /* DCNewsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18870B5E1C9D82CF005512CE /* DCNewsCell.m */; };
 		75697BED0A365659F9FA37B1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6315AEF426EE61F1DD4A592D /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,8 @@
 		18870B581C9C34A2005512CE /* NewsM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsM.m; sourceTree = "<group>"; };
 		18870B5A1C9C43E8005512CE /* NSArray+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
 		18870B5B1C9C43E8005512CE /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
+		18870B5D1C9D82CF005512CE /* DCNewsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCNewsCell.h; sourceTree = "<group>"; };
+		18870B5E1C9D82CF005512CE /* DCNewsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCNewsCell.m; sourceTree = "<group>"; };
 		27A96095197D7FB940B61F45 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		6315AEF426EE61F1DD4A592D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E41951DB5C9678E5685BBF28 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -110,6 +113,8 @@
 				18719D651C9C27E600A6C2D3 /* NewsTableViewController.m */,
 				18870B571C9C34A2005512CE /* NewsM.h */,
 				18870B581C9C34A2005512CE /* NewsM.m */,
+				18870B5D1C9D82CF005512CE /* DCNewsCell.h */,
+				18870B5E1C9D82CF005512CE /* DCNewsCell.m */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -266,6 +271,7 @@
 				18870B561C9C2EFF005512CE /* NetworkTools.m in Sources */,
 				18719D661C9C27E600A6C2D3 /* NewsTableViewController.m in Sources */,
 				18719D4D1C9C25BA00A6C2D3 /* AppDelegate.m in Sources */,
+				18870B5F1C9D82CF005512CE /* DCNewsCell.m in Sources */,
 				18870B5C1C9C43E8005512CE /* NSArray+Log.m in Sources */,
 				18870B591C9C34A2005512CE /* NewsM.m in Sources */,
 				18719D4A1C9C25BA00A6C2D3 /* main.m in Sources */,
