@@ -12,4 +12,6 @@
 
 @property(nonatomic, strong) NewsM *news;
 
+//可重用标示符号
++ (NSString *)cellIdentifier:(NewsM *)news;
 @end

@@ -22,9 +22,10 @@
 @property(nonatomic, assign) int replyCount;
 // 配图地址
 @property(nonatomic, copy) NSString *imgsrc;
-
-@property(nonatomic, copy) NSString *haha;
-
+// 多图数组
+@property(nonatomic, strong) NSArray *imgextra;
+//是否大图标记
+@property(nonatomic, assign, getter=isBigImage) BOOL imgType;
 
 +(instancetype)newsWithDict:(NSDictionary *)dict;
 

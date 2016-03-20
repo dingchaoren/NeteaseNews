@@ -25,6 +25,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // 设置预估行高
+    self.tableView.estimatedRowHeight = 80;
+//    // 设置行高，自动计算行高
+//    // cell 中药有向下的约束 能撑开整个cell
+//    // 所有的约束不能有负值
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
     
     // 测试加载新闻
     __weak typeof(self) weakSelf = self;
@@ -45,9 +52,12 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    DCNewsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"NewsCell" forIndexPath:indexPath];
     
-    cell.news = self.newsList[indexPath.row];
+    NewsM *n = self.newsList[indexPath.row];
+    NSString *ID = [DCNewsCell cellIdentifier:n];
+    DCNewsCell *cell = [tableView dequeueReusableCellWithIdentifier:ID forIndexPath:indexPath];
+    
+    cell.news = n;
     
     return cell;
 }
