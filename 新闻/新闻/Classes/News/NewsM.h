@@ -27,7 +27,6 @@
 //是否大图标记
 @property(nonatomic, assign, getter=isBigImage) BOOL imgType;
 
-+(instancetype)newsWithDict:(NSDictionary *)dict;
-
+// 加载指定URL 的新闻数组
 +(void)loadNewsListWithURLString:(NSString *)urlString finished:(void(^)(NSArray *newsList))finished;
 @end

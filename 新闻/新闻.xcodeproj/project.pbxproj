@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1862EC471C9E8EFD0023D461 /* topic_news.json in Resources */ = {isa = PBXBuildFile; fileRef = 1862EC461C9E8EFD0023D461 /* topic_news.json */; };
+		1862EC4A1C9E8F200023D461 /* Channel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1862EC491C9E8F200023D461 /* Channel.m */; };
+		1862EC4D1C9E8FB90023D461 /* NSObject+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1862EC4C1C9E8FB90023D461 /* NSObject+Extension.m */; };
+		1862EC4F1C9E94C70023D461 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1862EC4E1C9E94C70023D461 /* Home.storyboard */; };
+		1862EC521C9E94DE0023D461 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1862EC511C9E94DE0023D461 /* HomeViewController.m */; };
 		18719D4A1C9C25BA00A6C2D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18719D491C9C25BA00A6C2D3 /* main.m */; };
 		18719D4D1C9C25BA00A6C2D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18719D4C1C9C25BA00A6C2D3 /* AppDelegate.m */; };
 		18719D551C9C25BA00A6C2D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18719D541C9C25BA00A6C2D3 /* Assets.xcassets */; };
@@ -21,6 +26,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1862EC461C9E8EFD0023D461 /* topic_news.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = topic_news.json; sourceTree = "<group>"; };
+		1862EC481C9E8F200023D461 /* Channel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Channel.h; sourceTree = "<group>"; };
+		1862EC491C9E8F200023D461 /* Channel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Channel.m; sourceTree = "<group>"; };
+		1862EC4B1C9E8FB90023D461 /* NSObject+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Extension.h"; sourceTree = "<group>"; };
+		1862EC4C1C9E8FB90023D461 /* NSObject+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Extension.m"; sourceTree = "<group>"; };
+		1862EC4E1C9E94C70023D461 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		1862EC501C9E94DE0023D461 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		1862EC511C9E94DE0023D461 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		18719D451C9C25BA00A6C2D3 /* 新闻.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "新闻.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18719D491C9C25BA00A6C2D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		18719D4B1C9C25BA00A6C2D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -56,6 +69,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1862EC441C9E8ECD0023D461 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1862EC451C9E8ECD0023D461 /* Channel */,
+				1862EC4E1C9E94C70023D461 /* Home.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1862EC451C9E8ECD0023D461 /* Channel */ = {
+			isa = PBXGroup;
+			children = (
+				1862EC461C9E8EFD0023D461 /* topic_news.json */,
+				1862EC481C9E8F200023D461 /* Channel.h */,
+				1862EC491C9E8F200023D461 /* Channel.m */,
+				1862EC501C9E94DE0023D461 /* HomeViewController.h */,
+				1862EC511C9E94DE0023D461 /* HomeViewController.m */,
+			);
+			path = Channel;
+			sourceTree = "<group>";
+		};
 		18719D3C1C9C25BA00A6C2D3 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +133,7 @@
 		18719D5F1C9C273D00A6C2D3 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1862EC441C9E8ECD0023D461 /* Home */,
 				18719D601C9C273D00A6C2D3 /* News */,
 				18719D611C9C273D00A6C2D3 /* Tools */,
 			);
@@ -126,6 +161,8 @@
 				18870B5B1C9C43E8005512CE /* NSArray+Log.m */,
 				18870B541C9C2EFF005512CE /* NetworkTools.h */,
 				18870B551C9C2EFF005512CE /* NetworkTools.m */,
+				1862EC4B1C9E8FB90023D461 /* NSObject+Extension.h */,
+				1862EC4C1C9E8FB90023D461 /* NSObject+Extension.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -208,7 +245,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				18719D581C9C25BA00A6C2D3 /* LaunchScreen.storyboard in Resources */,
+				1862EC4F1C9E94C70023D461 /* Home.storyboard in Resources */,
 				18719D631C9C27C200A6C2D3 /* News.storyboard in Resources */,
+				1862EC471C9E8EFD0023D461 /* topic_news.json in Resources */,
 				18719D551C9C25BA00A6C2D3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,9 +309,12 @@
 			files = (
 				18870B561C9C2EFF005512CE /* NetworkTools.m in Sources */,
 				18719D661C9C27E600A6C2D3 /* NewsTableViewController.m in Sources */,
+				1862EC4D1C9E8FB90023D461 /* NSObject+Extension.m in Sources */,
+				1862EC521C9E94DE0023D461 /* HomeViewController.m in Sources */,
 				18719D4D1C9C25BA00A6C2D3 /* AppDelegate.m in Sources */,
 				18870B5F1C9D82CF005512CE /* DCNewsCell.m in Sources */,
 				18870B5C1C9C43E8005512CE /* NSArray+Log.m in Sources */,
+				1862EC4A1C9E8F200023D461 /* Channel.m in Sources */,
 				18870B591C9C34A2005512CE /* NewsM.m in Sources */,
 				18719D4A1C9C25BA00A6C2D3 /* main.m in Sources */,
 			);
