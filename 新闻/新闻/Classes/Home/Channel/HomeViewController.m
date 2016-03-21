@@ -10,7 +10,7 @@
 #import "Channel.h"
 #import "channelLabel.h"
 #import "ChannelCell.h"
-@interface HomeViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
+@interface HomeViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,channelLabelDelegate>
 
 // 频道数据
 @property(nonatomic, strong) NSArray *channelList;
@@ -117,11 +117,27 @@
     // 设置比例
     currentLabel.scale = currentScale;
     nextLabel.scale = nextScale;
+    
+    // 5 强制更新索引  --可以解决快速拖拽的问题
+    self.currentIndex = self.collectionView.contentOffset.x / self.collectionView.bounds.size.width;
+    
 }
 
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
     // 更新当前索引
     self.currentIndex = scrollView.contentOffset.x / scrollView.bounds.size.width;
+}
+
+#pragma mark ChannelLabel 代理方法
+-(void)channelLabelDidSelected:(channelLabel *)label{
+    NSLog(@"%@",label.text);
+    
+    self.currentIndex = label.tag;
+    // 滚动到指定位置
+    NSIndexPath *indexPath = [NSIndexPath indexPathForItem:self.currentIndex inSection:0];
+    
+    [self.collectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:NO];
+    
 }
 
 -(void)setupChannel {
@@ -133,12 +149,20 @@
     CGFloat x = margin;
     CGFloat h = self.channelView.bounds.size.height;
     
+    NSInteger index = 0;
     for (Channel *channel in self.channelList) {
         
         channelLabel *l = [channelLabel channeLabelWithTitle:channel.tname];
         
         // 设置位置
         l.frame = CGRectMake(x, 0, l.bounds.size.width, h);
+        
+        // 设置代理
+        l.delegate = self;
+        
+        // 设置 tag
+        l.tag = index++;
+        
         // 递增
         x += l.bounds.size.width;
         

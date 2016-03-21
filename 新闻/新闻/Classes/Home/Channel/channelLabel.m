@@ -26,9 +26,19 @@
     // 设置成小字体
     lb.font = [UIFont systemFontOfSize:DCNormalFontSize];
     
-    return lb;
+    // 允许用户交互
+    [lb setUserInteractionEnabled:YES];
     
+    return lb;
 }
+
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    if ([self.delegate respondsToSelector:@selector(channelLabelDidSelected:)]) {
+        [self.delegate channelLabelDidSelected:self];
+    }
+}
+
+
 
 -(void)setScale:(float)scale{
     // （18 - 14）/ 14

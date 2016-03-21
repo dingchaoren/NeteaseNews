@@ -8,10 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol channelLabelDelegate;
+
 @interface channelLabel : UILabel
+
+@property (nonatomic, weak) id<channelLabelDelegate>delegate;
 
 +(instancetype)channeLabelWithTitle:(NSString *)title;
 
 // 从 0~1 0是14号字  1是18号
 @property(nonatomic, assign)float scale;
+@end
+
+@protocol channelLabelDelegate <NSObject>
+
+-(void)channelLabelDidSelected:(channelLabel *)
+label;
 @end
