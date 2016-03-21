@@ -26,54 +26,60 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="GZx-rx-88f" secondAttribute="bottom" id="3TI-hS-08U"/>
-                                    <constraint firstItem="GZx-rx-88f" firstAttribute="leading" secondItem="FE2-vn-vt1" secondAttribute="leading" id="8sf-2W-b0J"/>
-                                    <constraint firstAttribute="trailing" secondItem="GZx-rx-88f" secondAttribute="trailing" id="Ycj-mh-DJD"/>
-                                    <constraint firstItem="GZx-rx-88f" firstAttribute="top" secondItem="FE2-vn-vt1" secondAttribute="top" id="dNe-ZZ-gpR"/>
-                                    <constraint firstAttribute="height" constant="44" id="okh-2r-eQs"/>
+                                    <constraint firstAttribute="height" constant="44" id="BqL-MQ-E6o"/>
+                                    <constraint firstAttribute="bottom" secondItem="GZx-rx-88f" secondAttribute="bottom" id="G8u-g4-kzn"/>
+                                    <constraint firstItem="GZx-rx-88f" firstAttribute="top" secondItem="FE2-vn-vt1" secondAttribute="top" id="Glm-8E-Ejl"/>
+                                    <constraint firstAttribute="trailing" secondItem="GZx-rx-88f" secondAttribute="trailing" id="LKH-qx-87S"/>
+                                    <constraint firstItem="GZx-rx-88f" firstAttribute="leading" secondItem="FE2-vn-vt1" secondAttribute="leading" id="Nog-r5-nnA"/>
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2dJ-dD-Ygo">
                                 <rect key="frame" x="0.0" y="108" width="600" height="492"/>
                                 <color key="backgroundColor" red="1" green="0.69123198009999998" blue="0.13385178210000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eaz-Xh-aHb">
-                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="itemSize" width="174" height="155"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="j76-4P-xGY">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ChannelCell" id="j76-4P-xGY" customClass="ChannelCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="174" height="155"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="174" height="155"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Xn3-DH-57T" id="RMd-ij-e3z"/>
+                                    <outlet property="delegate" destination="Xn3-DH-57T" id="u8O-J3-312"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2dJ-dD-Ygo" firstAttribute="top" secondItem="FE2-vn-vt1" secondAttribute="bottom" id="8Z1-A5-cza"/>
-                            <constraint firstItem="6nq-0C-IAM" firstAttribute="top" secondItem="2dJ-dD-Ygo" secondAttribute="bottom" id="EZV-Jb-CuJ"/>
-                            <constraint firstAttribute="trailing" secondItem="FE2-vn-vt1" secondAttribute="trailing" id="LfN-f0-xqi"/>
-                            <constraint firstAttribute="trailing" secondItem="2dJ-dD-Ygo" secondAttribute="trailing" id="NXF-GP-VyX"/>
-                            <constraint firstItem="FE2-vn-vt1" firstAttribute="leading" secondItem="vjA-iM-oLg" secondAttribute="leading" id="PAd-6q-J23"/>
-                            <constraint firstItem="FE2-vn-vt1" firstAttribute="top" secondItem="qcx-7E-Zlo" secondAttribute="bottom" id="Viu-MZ-o9M"/>
-                            <constraint firstItem="2dJ-dD-Ygo" firstAttribute="leading" secondItem="vjA-iM-oLg" secondAttribute="leading" id="p7F-A8-qM7"/>
+                            <constraint firstAttribute="trailing" secondItem="2dJ-dD-Ygo" secondAttribute="trailing" id="2H3-pK-7kr"/>
+                            <constraint firstAttribute="trailing" secondItem="FE2-vn-vt1" secondAttribute="trailing" id="4L4-3c-VNr"/>
+                            <constraint firstItem="2dJ-dD-Ygo" firstAttribute="top" secondItem="FE2-vn-vt1" secondAttribute="bottom" id="Dli-uk-2cl"/>
+                            <constraint firstItem="FE2-vn-vt1" firstAttribute="leading" secondItem="vjA-iM-oLg" secondAttribute="leading" id="ePJ-DM-KzD"/>
+                            <constraint firstItem="2dJ-dD-Ygo" firstAttribute="leading" secondItem="vjA-iM-oLg" secondAttribute="leading" id="mye-y7-xrQ"/>
+                            <constraint firstItem="FE2-vn-vt1" firstAttribute="top" secondItem="qcx-7E-Zlo" secondAttribute="bottom" id="vU5-9a-qe2"/>
+                            <constraint firstItem="6nq-0C-IAM" firstAttribute="top" secondItem="2dJ-dD-Ygo" secondAttribute="bottom" id="wxu-oY-gSe"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="网易新闻" id="g9s-qp-r6V"/>
                     <connections>
                         <outlet property="channelView" destination="GZx-rx-88f" id="GTu-bu-FYy"/>
+                        <outlet property="collectionView" destination="2dJ-dD-Ygo" id="1vY-Gd-CVA"/>
+                        <outlet property="layout" destination="eaz-Xh-aHb" id="8Go-6o-gou"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VJl-La-Co6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1177" y="283"/>
+            <point key="canvasLocation" x="1034" y="283"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2UC-qr-V17">

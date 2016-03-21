@@ -13,5 +13,9 @@
 @property(nonatomic, copy) NSString *tname;
 @property(nonatomic, copy) NSString *tid;
 
+// 只能内部使用，外部只读
+@property(nonatomic, strong, readonly) NSString *urlString;
+
+
 +(NSArray *)channelList;
 @end

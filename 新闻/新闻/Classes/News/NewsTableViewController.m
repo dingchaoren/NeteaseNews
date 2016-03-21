@@ -22,7 +22,19 @@
     
     [self.tableView reloadData];
 }
+-(void)setUrlString:(NSString *)urlString{
+    _urlString = urlString;
+    
+    // 测试加载新闻
+    __weak typeof(self) weakSelf = self;
+    [NewsM loadNewsListWithURLString:urlString finished:^(NSArray *newsList) {
+        
+        // 设置数组数值
+        weakSelf.newsList = newsList;
+    }];
+    
 
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // 设置预估行高
@@ -33,15 +45,7 @@
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     
     
-    // 测试加载新闻
-    __weak typeof(self) weakSelf = self;
-    [NewsM loadNewsListWithURLString:@"T1348647853363/0-20.html" finished:^(NSArray *newsList) {
-
-    // 设置数组数值
-        weakSelf.newsList = newsList;
-    }];
-    
-}
+    }
 
 #pragma mark - Table view data source
 
