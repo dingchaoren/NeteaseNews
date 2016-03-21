@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class NewsTableViewController;
 @interface ChannelCell : UICollectionViewCell
 
 // 加载新闻的 URL 字符串
 @property(nonatomic, strong) NSString *urlString;
+
+// 新闻视图控制器
+@property(nonatomic, strong)NewsTableViewController *VC;
 
 @end

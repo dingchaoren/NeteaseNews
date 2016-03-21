@@ -23,7 +23,8 @@
     [self.tableView reloadData];
 }
 -(void)setUrlString:(NSString *)urlString{
-    _urlString = urlString;
+    //urlString 仅需要加载数据使用，可以不用记录
+//    _urlString = urlString;
     
     // 测试加载新闻
     __weak typeof(self) weakSelf = self;

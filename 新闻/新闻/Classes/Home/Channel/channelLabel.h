@@ -12,4 +12,6 @@
 
 +(instancetype)channeLabelWithTitle:(NSString *)title;
 
+// 从 0~1 0是14号字  1是18号
+@property(nonatomic, assign)float scale;
 @end

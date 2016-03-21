@@ -10,7 +10,10 @@
 #import "NSObject+Extension.h"
 @implementation Channel
 
+// 重写setter 方法，意味着对象的引用处理，全部由程序员接管
+// 重写 copy 属性 在设置数值的时候，一定要写copy
 -(void)setTid:(NSString *)tid{
+    // 如果此处不适用copy 外面的copy 就白写了
     _tid = tid.copy;
     _urlString = [NSString stringWithFormat:@"%@/0-20.html",_tid];
 }
@@ -32,7 +35,11 @@
     }
     
     // 5 针对tid 做一个排序
-    return arrayM.copy;
+    return [arrayM sortedArrayUsingComparator:^NSComparisonResult(Channel * obj1, Channel * obj2) {
+        
+        return [obj1.tid compare:obj2.tid];
+        
+    }];
 }
 //description  不要抽取，放在各自的类中。写不好会死循环，影响性能
 -(NSString *)description{

@@ -8,14 +8,14 @@
 
 @interface ChannelCell ()
 
-@property(nonatomic, strong)NewsTableViewController *VC;
 
 @end
 
 @implementation ChannelCell
 
 -(void)setUrlString:(NSString *)urlString{
-    _urlString = urlString;
+    // 只负责将URLString 传递给 VC 。本身没有任何用处
+//    _urlString = urlString;
     //设置新闻控制器的 URL
     self.VC.urlString = urlString;
 }

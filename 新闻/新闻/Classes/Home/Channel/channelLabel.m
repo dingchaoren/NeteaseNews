@@ -29,4 +29,18 @@
     return lb;
     
 }
+
+-(void)setScale:(float)scale{
+    // （18 - 14）/ 14
+    float percent = (DCSelectedFontSize - DCNormalFontSize) / DCNormalFontSize;
+    //scale = 0  percent = 1
+    //scale = 1  4/14 + 1
+    percent = percent * scale + 1;
+    // 通过 transfrom 设置大小
+    self.transform = CGAffineTransformMakeScale(percent, percent);
+
+    // 设置颜色
+    self.textColor = [UIColor colorWithRed:scale green:0 blue:0 alpha:1];
+}
+
 @end
